@@ -19,8 +19,7 @@ class App extends React.Component {
         );
     }
 
-    render() {
-
+    renderContent() {
         if (!this.state.errorMessage && this.state.lat)
         {
             console.log(this.state.lat);
@@ -32,6 +31,11 @@ class App extends React.Component {
         }
 
         return <Loading />;
+
+    }
+
+    render() {
+        return <div> {this.renderContent() } </div>       
     }
 }
 
